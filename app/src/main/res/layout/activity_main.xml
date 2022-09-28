@@ -6,13 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/iv_tambah_pemasukan"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_coin" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="8dp"
+        android:text="Tambah Pemasukan"
+        app:layout_constraintEnd_toEndOf="@+id/iv_tambah_pemasukan"
+        app:layout_constraintStart_toStartOf="@+id/iv_tambah_pemasukan"
+        app:layout_constraintTop_toBottomOf="@+id/iv_tambah_pemasukan" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tambah Pengeluaran"
+        app:layout_constraintEnd_toEndOf="@+id/iv_tambah_pengeluaran"
+        app:layout_constraintStart_toStartOf="@+id/iv_tambah_pengeluaran"
+        app:layout_constraintTop_toBottomOf="@+id/iv_tambah_pengeluaran" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Detail Cashflow"
+        app:layout_constraintEnd_toEndOf="@+id/iv_detail_cashflow"
+        app:layout_constraintStart_toStartOf="@+id/iv_detail_cashflow"
+        app:layout_constraintTop_toBottomOf="@+id/iv_detail_cashflow" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pengaturan"
+        app:layout_constraintEnd_toEndOf="@+id/iv_pengaturan"
+        app:layout_constraintStart_toStartOf="@+id/iv_pengaturan"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pengaturan" />
+
+    <ImageView
+        android:id="@+id/iv_tambah_pengeluaran"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_tambah_pemasukan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_tambah_pemasukan"
+        app:srcCompat="@drawable/hand_coin" />
+
+    <ImageView
+        android:id="@+id/iv_detail_cashflow"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_tambah_pemasukan"
+        app:layout_constraintStart_toStartOf="@+id/iv_tambah_pemasukan"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/search_list" />
+
+    <ImageView
+        android:id="@+id/iv_pengaturan"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_detail_cashflow"
+        app:layout_constraintEnd_toEndOf="@+id/iv_tambah_pengeluaran"
+        app:layout_constraintStart_toStartOf="@+id/iv_tambah_pengeluaran"
+        app:layout_constraintTop_toTopOf="@+id/iv_detail_cashflow"
+        app:srcCompat="@drawable/setting" />
 </androidx.constraintlayout.widget.ConstraintLayout>
