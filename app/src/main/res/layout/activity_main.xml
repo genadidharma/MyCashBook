@@ -6,14 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/gv_statistik"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pemasukan" />
+
     <ImageView
         android:id="@+id/iv_tambah_pemasukan"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gv_statistik"
         app:srcCompat="@drawable/add_coin" />
 
     <TextView
@@ -85,4 +94,37 @@
         app:layout_constraintStart_toStartOf="@+id/iv_tambah_pengeluaran"
         app:layout_constraintTop_toTopOf="@+id/iv_detail_cashflow"
         app:srcCompat="@drawable/setting" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Rangkuman Bulan Ini"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pengeluaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pengeluaran: "
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/tv_pemasukan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pemasukan:"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pengeluaran"
+        app:layout_constraintStart_toStartOf="@+id/tv_pengeluaran"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pengeluaran" />
 </androidx.constraintlayout.widget.ConstraintLayout>

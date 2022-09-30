@@ -43,8 +43,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        val user = User("genadidharma", "12345678")
-        db.userDao().addUser(user)
+        val user = User("user", "user")
+        if (!db.userDao().checkUser(user.username)) {
+            db.userDao().addUser(user)
+        }
     }
 
     private fun login(username: String, password: String) {

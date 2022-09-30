@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyCashBook">
         <activity
+            android:name=".PengaturanActivity"
+            android:exported="true" />
+        <activity
             android:name=".TambahPengeluaranActivity"
             android:exported="true" />
         <activity
@@ -19,7 +22,7 @@
             android:name=".SettingActivity"
             android:exported="true" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".DetailCashflowActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"

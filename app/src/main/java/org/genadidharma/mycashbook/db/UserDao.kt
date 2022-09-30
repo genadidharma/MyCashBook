@@ -1,12 +1,12 @@
 package org.genadidharma.mycashbook.db
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 
 @Dao
 interface UserDao {
+    @Query("SELECT EXISTS(SELECT * FROM user WHERE username = :username)")
+    fun checkUser(username: String): Boolean
+
     @Insert
     fun addUser(user: User)
 
