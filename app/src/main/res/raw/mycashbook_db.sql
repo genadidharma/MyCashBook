@@ -1,0 +1,17 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE android_metadata (locale TEXT);
+INSERT INTO android_metadata VALUES('en_GB');
+CREATE TABLE `User` (`username` TEXT NOT NULL, `password` TEXT NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT);
+INSERT INTO User VALUES('user','user',1);
+CREATE TABLE `Cash` (`date` TEXT NOT NULL, `money` TEXT NOT NULL, `description` TEXT NOT NULL, `isIncome` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT);
+INSERT INTO Cash VALUES('26/9/2022','10000','jualan 1',1,1);
+INSERT INTO Cash VALUES('27/9/2022','15000','jualan 2',1,2);
+INSERT INTO Cash VALUES('29/9/2022','5000','makan',0,3);
+INSERT INTO Cash VALUES('29/9/2022','3000','minum',0,4);
+CREATE TABLE room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT);
+INSERT INTO room_master_table VALUES(42,'fceef408e2e7692be5d0435cf910f71b');
+DELETE FROM sqlite_sequence;
+INSERT INTO sqlite_sequence VALUES('User',6);
+INSERT INTO sqlite_sequence VALUES('Cash',4);
+COMMIT;
